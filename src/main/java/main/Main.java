@@ -28,7 +28,7 @@ public class Main {
             System.out.println("2. Gestionar Ordenes");
             System.out.println("3. Procesar Ordenes");
             System.out.println("4. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Por favor, selecciona una opcion para continuar: ");
             opcion = scanner.nextInt();
 
             switch (opcion) {
