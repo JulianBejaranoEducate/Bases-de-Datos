@@ -23,7 +23,7 @@ public class Main {
 
         int opcion;
         do {
-            System.out.println("\n--- MENU PRINCIPAL ---");
+            System.out.println("\n--- IMPLEMENTACION DE SISTEMA ---\n");
             System.out.println("1. Gestionar Inventario");
             System.out.println("2. Gestionar Ordenes");
             System.out.println("3. Procesar Ordenes");
@@ -51,7 +51,7 @@ public class Main {
     }
 
     private static void gestionarInventario(InventarioService inventarioService, Scanner scanner) {
-        System.out.println("\n--- GESTION DE INVENTARIO ---");
+        System.out.println("\n--- GESTION DE INVENTARIO ---\n");
         System.out.println(inventarioService);
 
         System.out.print("Ingrese el nombre del producto a actualizar: ");
@@ -67,7 +67,7 @@ public class Main {
     }
 
     private static void gestionarOrdenes(OrdenService ordenService, Scanner scanner) {
-        System.out.println("\n--- GESTION DE ORDENES ---");
+        System.out.println("\n--- GESTION DE ORDENES ---\n");
         System.out.println("1. Agregar una orden");
         System.out.println("2. Modificar una orden");
         System.out.println("3. Eliminar una orden");
@@ -119,7 +119,7 @@ public class Main {
     }
 
     private static void procesarOrdenes(OrdenService ordenService, Scanner scanner) {
-        System.out.println("\n--- PROCESAMIENTO DE ORDENES ---");
+        System.out.println("\n--- PROCESAMIENTO DE ORDENES ---\n");
         System.out.println("1. Procesar Orden Regular");
         System.out.println("2. Procesar Orden Urgente");
         System.out.println("3. Apilar Producto");
