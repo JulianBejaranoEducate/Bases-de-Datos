@@ -1,15 +1,13 @@
 package service;
 
 import model.Producto;
-
 import java.util.Arrays;
 
 public class InventarioService {
-
-    private Producto[] inventario;
-
+    // Arreglo para el inventario de productos
+    private Producto[] inventario; // Almacena los productos y sus cantidades
     public InventarioService(int capacidad) {
-        this.inventario = new Producto[capacidad];
+        this.inventario = new Producto[capacidad]; // Inicializa el inventario con la capacidad dada
     }
 
     public void inicializarProducto(int i, String nombre, int cantidad) {
