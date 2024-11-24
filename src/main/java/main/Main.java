@@ -60,7 +60,7 @@ public class Main {
         int cantidad = scanner.nextInt();
 
         if (inventarioService.actualizarCantidad(nombre, cantidad)) {
-            System.out.println("Cantidad actualizada correctamente.");
+            System.out.println("La cantidad ha sido actualizada correctamente.");
         } else {
             System.out.println("Producto no encontrado.");
         }
