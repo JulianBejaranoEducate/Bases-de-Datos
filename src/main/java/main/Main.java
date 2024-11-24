@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        InventarioService inventarioService = new InventarioService(5); // Capacidad inicial de 5 productos
+        InventarioService inventarioService = new InventarioService(5);
         OrdenService ordenService = new OrdenService();
 
         // Inicializamos el inventario con algunos productos
@@ -68,11 +68,11 @@ public class Main {
 
     private static void gestionarOrdenes(OrdenService ordenService, Scanner scanner) {
         System.out.println("\n--- GESTION DE ORDENES ---");
-        System.out.println("1. Agregar Orden");
-        System.out.println("2. Modificar Orden");
-        System.out.println("3. Eliminar Orden");
-        System.out.println("4. Mostrar Ordenes");
-        System.out.print("Seleccione una opcion: ");
+        System.out.println("1. Agregar una orden");
+        System.out.println("2. Modificar una orden");
+        System.out.println("3. Eliminar una orden");
+        System.out.println("4. Mostrar las ordenes");
+        System.out.print("Por favor, selecciona una opcion para continuar: ");
         int opcion = scanner.nextInt();
 
         switch (opcion) {
@@ -87,7 +87,7 @@ public class Main {
                 boolean urgente = scanner.nextBoolean();
                 Orden orden = new Orden(cliente, producto, cantidad, urgente);
                 ordenService.agregarOrden(orden);
-                System.out.println("Orden agregada correctamente.");
+                System.out.println("La orden has sido agregada correctamente.");
                 break;
             case 2:
                 System.out.print("Ingrese el indice de la orden a modificar: ");
@@ -102,19 +102,19 @@ public class Main {
                 urgente = scanner.nextBoolean();
                 Orden nuevaOrden = new Orden(cliente, producto, cantidad, urgente);
                 ordenService.modificarOrden(indexModificar, nuevaOrden);
-                System.out.println("Orden modificada correctamente.");
+                System.out.println("La orden ha sido modificada correctamente.");
                 break;
             case 3:
                 System.out.print("Ingrese el indice de la orden a eliminar: ");
                 int indexEliminar = scanner.nextInt();
                 ordenService.eliminarOrden(indexEliminar);
-                System.out.println("Orden eliminada correctamente.");
+                System.out.println("La orden ha sido eliminada correctamente.");
                 break;
             case 4:
                 System.out.println("Ordenes registradas: " + ordenService);
                 break;
             default:
-                System.out.println("Opcion no válida.");
+                System.out.println("Opcion no valida.");
         }
     }
 
@@ -147,14 +147,14 @@ public class Main {
                 boolean urgente = scanner.nextBoolean();
                 Orden nuevaOrden = new Orden(cliente, producto, cantidad, urgente);
                 ordenService.apilarProducto(nuevaOrden);
-                System.out.println("Producto apilado correctamente.");
+                System.out.println("El producto ha sido apilado correctamente.");
                 break;
             case 4:
                 Orden desapilado = ordenService.desapilarProducto();
                 System.out.println("Producto desapilado: " + desapilado);
                 break;
             default:
-                System.out.println("Opcio   n no valida.");
+                System.out.println("Opcion no valida.");
         }
     }
 }
